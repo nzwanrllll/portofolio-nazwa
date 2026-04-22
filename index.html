@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nazwa Nurul Azmi - Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        // Kombinasi warna modern minimalis (Slate & Sky Blue)
+                        deepBlue: '#0f172a',
+                        mutedSlate: '#334155',
+                        coolAzure: '#0ea5e9',
+                        frostBlue: '#f8fafc',
+                        softMist: '#e2e8f0',
+                    },
+                    fontFamily: {
+                        serif: ['"Bodoni Moda"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                        heading: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-frostBlue text-deepBlue dark:bg-deepBlue dark:text-frostBlue font-sans transition-colors duration-500 overflow-x-hidden">
+
+    <div id="custom-cursor"></div>
+
+    <nav class="fixed w-full top-0 z-50 bg-frostBlue/90 dark:bg-deepBlue/90 backdrop-blur-md border-b border-coolAzure/30">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex justify-between items-center py-5">
+                <a href="#home" class="text-2xl font-serif font-bold tracking-tighter relative z-50">Nazwa<span class="text-coolAzure">.</span></a>
+                
+                <div class="hidden md:flex space-x-8 font-medium">
+                    <a href="#home" class="hover:text-coolAzure transition-colors">Home</a>
+                    <a href="#about" class="hover:text-coolAzure transition-colors">About</a>
+                    <a href="#skills" class="hover:text-coolAzure transition-colors">Skills</a>
+                    <a href="#ai-tools" class="hover:text-coolAzure transition-colors">AI Tools</a>
+                    <a href="#projects" class="hover:text-coolAzure transition-colors">Projects</a>
+                    <a href="#certificates" class="hover:text-coolAzure transition-colors">Certificates</a>
+                    <a href="#contact" class="hover:text-coolAzure transition-colors">Contact</a>
+                </div>
+
+                <div class="flex items-center gap-4 relative z-50">
+                    <button id="theme-toggle" class="p-2 text-xl hover:text-coolAzure transition-colors"><i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:block"></i></button>
+                    <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none hover:text-coolAzure"><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-frostBlue dark:bg-deepBlue border-b border-coolAzure/20 flex-col p-6 space-y-4 shadow-2xl z-40">
+            <a href="#home" class="mobile-link">Home</a>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#skills" class="mobile-link">Skills</a>
+            <a href="#ai-tools" class="mobile-link">AI Tools</a>
+            <a href="#projects" class="mobile-link">Projects</a>
+            <a href="#certificates" class="mobile-link">Certificates</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center justify-center pt-32 md:pt-20 px-6 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12 relative z-10">
+            <div class="relative group">
+
+                <div id="profile-surprise" class="absolute inset-0 z-0 opacity-0 transition-opacity duration-1000">
+                    <i class="fas fa-heart text-pink-400 absolute -top-4 -left-4 animate-bounce"></i>
+                    <i class="fas fa-star text-yellow-400 absolute -bottom-2 -right-6 animate-pulse"></i>
+                    <i class="fas fa-sparkles text-purple-400 absolute top-10 -right-8 animate-ping"></i>
+                </div>
+                
+                <div class="w-64 h-64 md:w-80 md:h-80 rounded-2xl relative z-10 border-4 border-white dark:border-mutedSlate shadow-2xl overflow-hidden shadow-coolAzure/20">
+                    <img src="assets/images/naj.jpg" alt="Nazwa" class="w-full h-full object-cover">
+                </div>
+                
+                <div class="absolute -bottom-2 -left-2 bg-mutedSlate text-white px-6 py-2 rounded-full z-20 shadow-lg animate-bounce text-sm md:text-base font-serif italic">
+                    Hello Everyone!
+                </div>
+            </div>
+
+            <div class="text-center md:text-left z-20">
+                <h1 class="font-serif text-5xl md:text-8xl text-deepBlue dark:text-softMist mb-4">Nazwa Nurul Azmi</h1>
+                <h2 class="font-sans text-lg md:text-2xl font-light tracking-[0.5em] uppercase opacity-70">Junior Web Developer</h2>
+                
+                <div class="mt-8 flex flex-wrap justify-center md:justify-start gap-4 relative z-30">
+                    <a href="#projects" class="px-8 py-3 bg-deepBlue dark:bg-softMist dark:text-deepBlue text-white rounded-sm hover:tracking-widest transition-all">VIEW WORK</a>
+                    <a href="#contact" class="px-8 py-3 border border-deepBlue dark:border-softMist rounded-sm hover:bg-deepBlue hover:text-white transition-all">CONTACT ME</a>
+                </div>
+
+                <div class="mt-8 flex justify-center md:justify-start items-center gap-[15px] text-2xl relative z-30">
+                    <a href="https://linkedin.com/in/Nazwa NA" target="_blank" class="hover:text-coolAzure transition-all duration-300">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://instagram.com/nzwanrllll" target="_blank" class="hover:text-coolAzure transition-all duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://github.com/nzwanrllll" target="_blank" class="hover:text-coolAzure transition-all duration-300">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-32 px-6 relative overflow-hidden">
+
+    <!-- BACKGROUND GLOW -->
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-coolAzure/20 blur-3xl rounded-full animate-pulse"></div>
+    <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-mutedSlate/20 blur-3xl rounded-full animate-pulse"></div>
+
+    <div class="max-w-6xl mx-auto relative z-10">
+
+        <!-- <h2 class="section-title main-title text-center">About Me</h2> -->
+
+        <!-- MAIN CARD -->
+        <div class="mt-12 backdrop-blur-xl bg-white/70 dark:bg-deepBlue/70 border border-white/20 rounded-2xl shadow-xl p-6 md:p-10 max-w-5xl mx-auto">
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+
+                <!-- TEXT -->
+                <div class="space-y-6">
+                    <h3 class="text-3xl md:text-4xl font-heading leading-snug">
+                        About Me
+                    </h3>
+
+                    <p class="text-lg opacity-80 leading-relaxed">
+                        Saya adalah seseorang yang senang mencoba hal baru dan terus berkembang.
+                        Saya menikmati proses belajar, beradaptasi, dan menemukan cara untuk menjadi lebih baik setiap harinya.
+                    </p>
+
+                    <p class="text-lg opacity-80 leading-relaxed">
+                        Bagi saya, konsistensi dan rasa ingin tahu adalah hal yang paling penting.
+                        Karena dari hal kecil itulah proses besar dimulai.
+                    </p>
+
+                    <!-- MINI STATS -->
+                    <div class="flex gap-8 pt-4">
+                        <div>
+                            <p class="text-2xl font-bold text-coolAzure">3+</p>
+                            <p class="text-sm opacity-60">Projects</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-coolAzure">1+</p>
+                            <p class="text-sm opacity-60">Experience</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FOTO -->
+                <div class="flex justify-center relative">
+
+                    <div class="absolute w-60 h-60 bg-coolAzure/30 blur-3xl rounded-full animate-pulse"></div>
+
+                    <div class="relative group">
+
+                        <div class="absolute -inset-1 bg-gradient-to-tr from-coolAzure to-softMist rounded-2xl blur opacity-70 group-hover:opacity-100 transition"></div>
+
+                        <img src="assets/images/naz.jpg"
+                            class="relative w-60 md:w-64 rounded-2xl shadow-2xl object-cover 
+                            transform group-hover:scale-105 transition duration-500">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- EXPERIENCE & EDUCATION -->
+        <div class="grid md:grid-cols-2 gap-8 mt-16 items-stretch">
+
+            <!-- EXPERIENCE -->
+            <div class="group bg-white/80 dark:bg-deepBlue/60 backdrop-blur-lg 
+                p-6 rounded-2xl shadow-lg hover:shadow-2xl transition 
+                relative overflow-hidden h-full flex flex-col">
+
+                <!-- overlay -->
+                <div class="absolute inset-0 bg-gradient-to-tr from-coolAzure/10 to-transparent 
+                    opacity-0 group-hover:opacity-100 transition pointer-events-none"></div>
+
+                <div class="relative z-10 flex flex-col h-full">
+
+                    <h3 class="text-xl font-bold mb-4">Experience</h3>
+
+                    <!-- ISI -->
+                <div class="space-y-4">
+
+            <!-- COMPANY -->
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 flex items-center justify-center rounded-lg 
+                    bg-coolAzure/10 text-coolAzure">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div>
+                    <p class="font-semibold text-lg">Access Media</p>
+                    <p class="text-xs opacity-60">Web Development Internship</p>
+                </div>
+            </div>
+
+            <!-- DESC -->
+            <div class="p-4 rounded-xl bg-softMist/40 dark:bg-mutedSlate/30 border border-coolAzure/10">
+                <p class="text-sm leading-relaxed opacity-80">
+                    Praktik Kerja Lapangan (PKL) di bidang pengembangan web, 
+                    berfokus pada pembuatan dan pengembangan fitur website.
+                </p>
+            </div>
+
+            <!-- DATE -->
+            <div class="flex items-center gap-2 text-xs opacity-60">
+                <i class="fas fa-calendar-alt text-coolAzure"></i>
+                <span>20 Januari – 24 April 2026</span>
+            </div>
+
+        </div>
+
+                    <!-- PUSH BUTTON KE BAWAH -->
+                    <div class="mt-auto pt-6">
+                        <a href="experience.html" 
+                            class="inline-block px-5 py-2 bg-deepBlue text-white rounded-lg hover:bg-coolAzure transition">
+                            Lihat kegiatan
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- EDUCATION -->
+            <div class="group bg-white/80 dark:bg-deepBlue/60 backdrop-blur-lg 
+                p-6 rounded-2xl shadow-lg hover:shadow-2xl transition 
+                relative overflow-hidden h-full flex flex-col">
+
+                <h3 class="text-xl font-bold mb-4">Education</h3>
+
+                <div class="space-y-3 flex-1">
+
+            <!-- ITEM -->
+            <div class="flex items-center gap-3 p-4 rounded-xl 
+                bg-white/60 dark:bg-mutedSlate/30 
+                border border-coolAzure/10 
+                hover:shadow-md hover:-translate-y-1 transition">
+
+                <div class="w-10 h-10 flex items-center justify-center rounded-lg 
+                    bg-coolAzure/10 text-coolAzure">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+
+                <div>
+                    <p class="font-semibold">SMKN 4 Tasikmalaya</p>
+                    <p class="text-xs text-coolAzure">Software Engineering</p>
+                </div>
+
+            </div>
+
+            <!-- ITEM -->
+            <div class="flex items-center gap-3 p-4 rounded-xl 
+                bg-white/60 dark:bg-mutedSlate/30 
+                border border-coolAzure/10 
+                hover:shadow-md hover:-translate-y-1 transition">
+
+                <div class="w-10 h-10 flex items-center justify-center rounded-lg 
+                    bg-coolAzure/10 text-coolAzure">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+
+                <p class="font-semibold">MTs Nahdlatul Ulama Ciamis</p>
+
+            </div>
+
+            <!-- ITEM -->
+            <div class="flex items-center gap-3 p-4 rounded-xl 
+                bg-white/60 dark:bg-mutedSlate/30 
+                border border-coolAzure/10 
+                hover:shadow-md hover:-translate-y-1 transition">
+
+                <div class="w-10 h-10 flex items-center justify-center rounded-lg 
+                    bg-coolAzure/10 text-coolAzure">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+
+                <p class="font-semibold">SDN Cisarua</p>
+
+            </div>
+
+        </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    </section>
+
+    <section id="skills" class="py-24 px-6">
+        <div class="max-w-5xl mx-auto flex flex-col items-center">
+            <h2 class="section-title main-title">Technical Skills</h2>
+            <div class="scene mt-12">
+                <div class="cube" id="interactive-cube"></div>
+            </div>
+            <p class="mt-12 text-sm opacity-50 italic animate-pulse">Click the cube to rotate</p>
+        </div>
+    </section>
+
+    <section id="ai-tools" class="py-24 px-6 bg-deepBlue text-frostBlue relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-mutedSlate/30 pointer-events-none"></div>
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
+            <h2 class="section-title main-title text-frostBlue">AI Tools</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                <div class="ai-card group text-center">
+                        <img 
+                        src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" 
+                        class="w-12 h-12 mx-auto mb-3 group-hover:rotate-180 transition-transform duration-500" 
+                        alt="ChatGPT"
+                        >
+
+                        <p class="font-semibold text-sm tracking-wide">
+                            ChatGPT
+                        </p>
+
+                </div>
+
+                <div class="ai-card group text-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg" 
+                        class="w-12 h-12 mx-auto mb-3 group-hover:scale-125 transition-all">
+                    <p class="font-semibold text-sm tracking-wide">Gemini AI</p>
+                </div>
+
+                <div class="ai-card group text-center">
+                    <img src="https://www.vectorlogo.zone/logos/github_copilot/github_copilot-icon.svg" 
+                        class="w-12 h-12 mx-auto mb-3 group-hover:-translate-y-2 transition-all">
+                    <p class="font-semibold text-sm tracking-wide">GitHub Copilot</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 px-6">
+        <h2 class="section-title main-title text-center">Portfolio Projects</h2>
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mt-12" id="project-grid">
+            <div class="project-card">
+                <div class="h-52 bg-mutedSlate relative overflow-hidden group">
+                    <img src="assets/images/p1.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-deepBlue/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <a href="http://cert.haadir.in/login" class="px-6 py-2 border border-frostBlue text-frostBlue hover:bg-frostBlue hover:text-deepBlue transition-colors text-sm font-semibold tracking-widest">VIEW LIVE</a>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-1">Generate Sertifikat</h3>
+                    <p class="text-xs text-coolAzure uppercase tracking-widest">Web Application</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="h-52 bg-mutedSlate relative overflow-hidden group">
+                    <img src="assets/images/p2.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-deepBlue/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <a href="https://nzwanrllll.itch.io/bouncy-buddies" class="px-6 py-2 border border-frostBlue text-frostBlue hover:bg-frostBlue hover:text-deepBlue transition-colors text-sm font-semibold tracking-widest">VIEW LIVE</a>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-1">Bouncy Buddies</h3>
+                    <p class="text-xs text-coolAzure uppercase tracking-widest">Game Adventure</p>
+                </div>
+            </div>
+
+            
+
+            <div class="project-card">
+                <div class="h-52 bg-softMist dark:bg-mutedSlate flex items-center justify-center relative overflow-hidden group">
+                    <img src="assets/images/p3.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <!-- <span class="text-deepBlue/50 dark:text-frostBlue/50 italic font-semibold">Localhost Only</span> -->
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-1">Profile SMKN 4 Tasikmalaya</h3>
+                    <p class="text-xs text-coolAzure uppercase tracking-widest">Local</p>
+                </div>
+            </div>
+
+            <div class="project-card hidden extra-project">
+                <!-- <div class="h-52 bg-deepBlue flex items-center justify-center text-white relative group overflow-hidden">
+                    <i class="fas fa-video text-4xl group-hover:scale-110 transition-all"></i>
+                    <div class="absolute inset-0 bg-coolAzure/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                         <a href="#" class="px-6 py-2 border border-deepBlue text-deepBlue hover:bg-deepBlue hover:text-frostBlue transition-colors text-sm font-semibold tracking-widest">WATCH</a>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-1">Taekwondo Promo</h3>
+                    <p class="text-xs text-coolAzure uppercase tracking-widest">Video Production</p>
+                </div> -->
+
+                <div class="project-card">
+                <div class="h-52 bg-mutedSlate relative overflow-hidden group">
+                    <img src="assets/images/p5.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-deepBlue/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <a href="https://nzwanrllll.itch.io/name-of-herbivorous-animall" class="px-6 py-2 border border-frostBlue text-frostBlue hover:bg-frostBlue hover:text-deepBlue transition-colors text-sm font-semibold tracking-widest">VIEW LIVE</a>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-1">Matching Pictures and Animal Names</h3>
+                    <p class="text-xs text-coolAzure uppercase tracking-widest">Game Education </p>
+                </div>
+            </div> 
+        </div>
+
+            
+        </div>
+
+        <div class="text-center mt-14">
+            <button id="toggle-projects" class="text-sm font-bold border-b-2 border-coolAzure pb-1 text-mutedSlate dark:text-softMist hover:text-coolAzure transition-all tracking-widest">
+                LIHAT LEBIH BANYAK
+            </button>
+        </div>
+    </section>
+
+    <section id="certificates" class="py-24 px-6 bg-softMist/30 dark:bg-mutedSlate/10">
+        <h2 class="section-title main-title text-center">Certificates</h2>
+        <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-12" id="cert-grid">
+            <div class="cert-box rounded-md shadow-sm">
+                <img src="assets/images/c1.png" class="w-full h-full object-cover">
+            </div>
+            <div class="cert-box rounded-md shadow-sm">
+                <img src="assets/images/c4.jpg" class="w-full h-full object-cover">
+            </div>
+            <div class="cert-box rounded-md shadow-sm">
+                <img src="assets/images/c6.jpg" class="w-full h-full object-cover">
+            </div>
+            <div class="cert-box rounded-md shadow-sm hidden extra-cert">
+                <img src="assets/images/c2.jpg" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/600x400/334155/f8fafc?text=Certificate+4'">
+            </div>
+            <div class="cert-box rounded-md shadow-sm hidden extra-cert">
+                <img src="assets/images/c3.jpg" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/600x400/334155/f8fafc?text=Certificate+4'">
+            </div>
+        </div>
+        
+        <div class="text-center mt-12">
+            <button id="toggle-certs" class="text-sm font-bold border-b-2 border-coolAzure pb-1 text-mutedSlate dark:text-softMist hover:text-coolAzure transition-all tracking-widest">
+                LIHAT SEMUA SERTIFIKAT
+            </button>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 px-6 relative overflow-hidden">
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-coolAzure/10 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-mutedSlate/10 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h2 class="font-serif text-4xl md:text-6xl mb-6 font-bold text-deepBlue dark:text-frostBlue main-title">Let's Collaborate</h2>
+            <p class="text-lg opacity-80 mb-12 max-w-2xl mx-auto leading-relaxed">
+                Apakah Anda memiliki proyek menarik atau butuh bantuan dalam pengembangan web? Mari berdiskusi dan mewujudkan ide-ide Anda bersama.
+            </p>
+            
+            <div class="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+                <a href="mailto:nazwanurulazmi1006@gmail.com" class="group flex items-center justify-center gap-4 p-6 bg-white dark:bg-mutedSlate/30 border border-coolAzure/20 rounded-xl hover:bg-deepBlue hover:text-white dark:hover:bg-coolAzure transition-all shadow-sm hover:shadow-lg">
+                    <i class="fas fa-envelope text-2xl text-coolAzure group-hover:text-white"></i>
+                    <span class="font-semibold tracking-wide">Email</span>
+                </a>
+                <a href="https://wa.me/+6281918933504" class="group flex items-center justify-center gap-4 p-6 bg-white dark:bg-mutedSlate/30 border border-coolAzure/20 rounded-xl hover:bg-[#25D366] hover:text-white hover:border-[#25D366] transition-all shadow-sm hover:shadow-lg">
+                    <i class="fab fa-whatsapp text-2xl text-[#25D366] group-hover:text-white"></i>
+                    <span class="font-semibold tracking-wide">WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 bg-deepBlue text-frostBlue text-center">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col items-center gap-2">
+            <p class="text-xs tracking-[0.2em] uppercase opacity-80">
+                &copy; 2026 Nazwa Nurul Azmi. All Rights Reserved.
+            </p>
+           
+        </div>
+    </footer>
+
+
+        <!-- MUSIC PLAYER -->
+    <div id="music-player" class="fixed bottom-6 right-6 z-50">
+        <button id="music-btn" class="w-14 h-14 rounded-full bg-primary text-white shadow-lg flex items-center justify-center hover:scale-110 transition">
+            <i class="fas fa-music"></i>
+        </button>
+
+        <audio id="bg-music" loop>
+            <source src="assets/music/music.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+/* Typography & Elegant Titles */
+.section-title {
+    @apply text-center text-4xl md:text-6xl font-serif font-bold mb-10 tracking-tight;
+}
+
+/* Custom Cursor */
+#custom-cursor {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #0ea5e9;
+    background: rgba(14, 165, 233, 0.1);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s ease-out, background 0.3s;
+}
+
+@media (max-width: 768px) {
+    #custom-cursor { display: none; }
+}
+
+/* Edu Card Override */
+.edu-card {
+    @apply transition-transform duration-300;
+}
+
+/* AI Tool Card */
+.ai-card {
+    @apply flex flex-col items-center justify-center text-center
+    p-6 rounded-2xl 
+    bg-white/5 backdrop-blur-sm 
+    border border-white/10 
+    hover:bg-white/10 
+    transition-all duration-300 
+    hover:-translate-y-1;
+}
+
+/* Project Card */
+.project-card {
+    @apply bg-white dark:bg-mutedSlate/40 rounded-2xl overflow-hidden 
+    border border-coolAzure/10 shadow-sm hover:-translate-y-2 
+    hover:shadow-2xl transition-all duration-300;
+}
+
+/* Cert Box */
+.cert-box {
+    @apply aspect-video bg-mutedSlate/20 cursor-pointer grayscale hover:grayscale-0 transition-all duration-500 overflow-hidden border border-coolAzure/20 relative;
+}
+
+/* Mobile Link */
+.mobile-link {
+    @apply text-xl font-sans font-semibold border-b border-coolAzure/10 pb-3 pt-2 hover:text-coolAzure text-center transition-colors;
+}
+
+/* 3D Cube Styling - Updated for new theme */
+.scene {
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+}
+.cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-100px) rotateX(-20deg) rotateY(20deg);
+    transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+    cursor: pointer;
+}
+.cube__face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #0ea5e9;
+    background: #f8fafc;
+    backface-visibility: hidden;
+    @apply dark:bg-deepBlue;
+}
+
+.cube__face--front  { transform: rotateY(  0deg) translateZ(100px); }
+.cube__face--back   { transform: rotateY(180deg) translateZ(100px); }
+.cube__face--right  { transform: rotateY( 90deg) translateZ(100px); }
+.cube__face--left   { transform: rotateY(-90deg) translateZ(100px); }
+.cube__face--top    { transform: rotateX( 90deg) translateZ(100px); }
+.cube__face--bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+
+/* Pastikan animasi background di belakang foto mengikuti bentuk kotak */
+.rect-anim {
+    @apply rounded-lg; /* Agar elemen dekoratif kecil tidak terlalu tajam */
+}
+
+/* Memastikan flexbox social icons tetap sejajar sempurna */
+#home .fab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* --- Styling Tambahan untuk Judul Section --- */
+.main-title {
+    position: relative;
+    padding-bottom: 1.5rem !important; /* Memberi ruang untuk garis */
+    margin-bottom: 3rem !important;    /* Konsistensi jarak bawah */
+}
+
+.main-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px; /* Panjang garis */
+    height: 3px; /* Ketebalan garis */
+    background-color: #0ea5e9; /* Warna coolAzure */
+    border-radius: 9999px; /* Rounded agar modern */
+}
+
+#music-btn {
+    backdrop-filter: blur(10px);
+    background: rgba(34,34,59,0.8);
+}
+
+/* floating effect foto */
+@keyframes floatSlow {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+#about img {
+    animation: floatSlow 6s ease-in-out infinite;
+} 
+
+.card-hover {
+    @apply hover:-translate-y-2 hover:shadow-xl transition-all duration-300;
+}
