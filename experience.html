@@ -5,24 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experience - Nazwa</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <script>
+   <script>
         tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        deepBlue: '#0f172a',
-                        mutedSlate: '#334155',
-                        coolAzure: '#0ea5e9',
-                        frostBlue: '#f8fafc',
-                        softMist: '#e2e8f0',
-                    }
-                }
+    darkMode: 'class',
+    theme: {
+        extend: {
+            colors: {
+                primary: '#0f172a', // samain sama index kamu
+                deepBlue: '#0f172a',
+                mutedSlate: '#334155',
+                coolAzure: '#0ea5e9',
+                frostBlue: '#f8fafc',
+                softMist: '#e2e8f0',
             }
         }
+    }
+}
     </script>
+
+    
 </head>
 
 <body class="bg-frostBlue text-deepBlue dark:bg-deepBlue dark:text-frostBlue font-sans transition-colors duration-500">
@@ -125,13 +130,67 @@
 
     <!-- BACK BUTTON -->
     <div class="text-center mt-20">
-        <a href="index.html"
-            class="inline-block px-6 py-2 bg-coolAzure text-white rounded-lg hover:bg-sky-600 transition">
+        <a href="index.html#experience"
+        class="inline-block px-5 py-2 bg-deepBlue text-white rounded-lg hover:bg-coolAzure transition">
             ← Kembali
         </a>
     </div>
 
 </div>
 
+
+    <!-- CUSTOM CURSOR -->
+    <div id="custom-cursor"></div>
+
+        <!-- MUSIC PLAYER -->
+    <div id="music-player" class="fixed bottom-6 right-6 z-50">
+        <button id="music-btn" class="w-14 h-14 rounded-full bg-deepBlue text-white shadow-lg flex items-center justify-center hover:scale-110 transition">
+            <i class="fas fa-music"></i>
+        </button>
+
+        <audio id="bg-music" loop>
+            <source src="assets/music/music.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+
+        <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // CURSOR
+        const cursor = document.getElementById('custom-cursor');
+        if (cursor && window.innerWidth > 768) {
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.transform = `translate(${e.clientX - 12}px, ${e.clientY - 12}px)`;
+            });
+        }
+
+        // MUSIC
+        const music = document.getElementById("bg-music");
+        const musicBtn = document.getElementById("music-btn");
+
+        let isPlaying = false;
+
+        musicBtn.addEventListener("click", () => {
+            if (isPlaying) {
+                music.pause();
+                musicBtn.innerHTML = '<i class="fas fa-music"></i>';
+            } else {
+                music.play();
+                musicBtn.innerHTML = '<i class="fas fa-pause"></i>';
+            }
+            isPlaying = !isPlaying;
+        });
+
+    });
+         </script><script>
+const cursor = document.getElementById('custom-cursor');
+
+document.addEventListener('mousemove', (e) => {
+    if(cursor){
+        cursor.style.transform = `translate(${e.clientX - 12}px, ${e.clientY - 12}px)`;
+    }
+});
+</script>
 </body>
 </html>
