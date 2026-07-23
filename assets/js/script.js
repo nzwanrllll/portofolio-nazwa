@@ -43,32 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.classList.toggle('dark');
     });
 
-    // 4. Skills Cube Initialization
-    const cube = document.getElementById('interactive-cube');
-    const skillIcons = [
-        { icon: 'fa-laravel', color: '#FF2D20', name: 'LARAVEL' },
-        { icon: 'fa-php', color: '#777BB4', name: 'PHP' },
-        { icon: 'fa-js', color: '#F7DF1E', name: 'JS' },
-        { icon: 'fa-html5', color: '#E34F26', name: 'HTML' },
-        { icon: 'fa-css3-alt', color: '#1572B6', name: 'CSS' },
-        { icon: 'fa-github', color: '#181717', name: 'GITHUB' }
-    ];
-
-    const faceClasses = ['front', 'back', 'right', 'left', 'top', 'bottom'];
-    skillIcons.forEach((skill, i) => {
-        const face = document.createElement('div');
-        face.className = `cube__face cube__face--${faceClasses[i]}`;
-        // Perbaikan kontras warna untuk Github di dark mode
-        const iconColor = skill.name === 'GITHUB' ? 'var(--tw-text-opacity)' : skill.color;
-        face.innerHTML = `<i class="fab ${skill.icon} text-6xl mb-2" style="color:${skill.color}"></i><span class="text-xs font-bold tracking-widest">${skill.name}</span>`;
-        cube.appendChild(face);
-    });
-
-    let rx = -20, ry = 20;
-    cube.addEventListener('click', () => {
-        rx += 90; ry += 90;
-        cube.style.transform = `translateZ(-100px) rotateX(${rx}deg) rotateY(${ry}deg)`;
-    });
+    // 4. Skills
+    
+   
 
     // 5. Toggle Projects (Show More / Show Less)
     const toggleProjBtn = document.getElementById('toggle-projects');
